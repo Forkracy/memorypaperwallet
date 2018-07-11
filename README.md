@@ -18,6 +18,7 @@ This app is a single-page application (SPA) that runs completely client-side. It
 - Bitcoin segwit paper wallet support.
 - Litecoin, Etherem, Monero, and Ardor/Ignis Support.
 - Identicon implementation. Visually identify your address.
+- Ability to split paper wallets into multiple parts using Shamirs Secret Sharing https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing
  
 
 Site:  https://xcubicle.github.io/memorypaperwallet/
