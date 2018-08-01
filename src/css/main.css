@@ -37,7 +37,7 @@ body.tos-show {
 
 .paper-wallet {
   position: relative;
-  width: 550px;
+  width: 707px;
   margin: auto;
   padding: 9px;
 }
@@ -119,7 +119,7 @@ body.tos-show {
 }
 
 .wallet-bg {
-  width: 550px;
+  width: 707px;
   height: 300px;
   border: 1px solid #000
 }
@@ -162,12 +162,12 @@ body.tos-show {
 }
 
 .pub-text {
-  top: -40px;
-  right: 105px;
-  font-size: 8px;
+  top: -121px;
+  right: 140px;
+  font-size: 10px;
 }
 
-.pri-text { bottom: 100%; left: 261px; font-size: 10px; width: 274px; word-wrap: break-word; background: #fff; top: 132px; height: 17px; text-align: center; line-height: 8px; }
+.pri-text { bottom: 100%; left: 375px; font-size: 10px; width: 274px; word-wrap: break-word; background: #fff; top: 132px; height: 17px; text-align: center; line-height: 8px; }
 
 .date {
   position: absolute;
@@ -197,35 +197,48 @@ body.tos-show {
 /*Accountable for unreasonable long text*/
 #nxtpri {
   word-wrap: break-word;
-  width: 45%;
-  left: 272px;
+  width: 37%;
+  left: 382px;
   bottom: 160px;
 }
 
 
 /*XMR qr codes*/
+.xmr .qr-pub { top: 45px; left: 470px; }
 #xmrpub {
-  width: 50%;
-  word-wrap: break-word;
-  left: 28px;
-  top: 140px;
+  width: 113px;
+   word-wrap: break-word;
+   left: 583px;
+   top: 53px;
+   transform: rotate(0);
+   font-size: 10px;
 }
-#xmrpri-spend {word-wrap: break-word; display: block; width: 297px; left: 251px; top: 142px; background: #fff; height: 19px; font-size: 11px; line-height: 9px; text-align: center; z-index: 9 }
-#xmrpri-view  {word-wrap: break-word; left: 271px; background: #fff; width: 297px; display: block; top: 141px; height: 21px; font-size: 11px; line-height: 9px; text-align: center; }
+.xmr .pri-text {word-wrap: break-word; display: block; width: 218px; left: 11px; top: 262px; background: #fff; font-size: 9px; line-height: 9px; text-align: center; z-index: 9; transform: rotate(0) }
+  .xmr.cloned .pri-text { width: 460px }
+#xmrpri-view  {word-wrap: break-word; left: 478px; background: #fff; width: 128px; display: block; top: 197px; font-size: 11px; line-height: 9px; text-align: center; }
 
-#qr-xmrpri-spend {
+.xmr .qr-pri {
   position: absolute;
-  right: -6px;
-  top: -4px;
+  right: 467px;
+  top: 23px;
 }
-#qr-xmrpri-view {
-  position: absolute;
-  right: -6px;
-  top: 177px;
-}
+.xmr .qr-pri img { width: 225px; }
+
+#qr-xmrpri-view { position: absolute; right: 0; top: 149px; }
+  #qr-xmrpri-view img { width: 88px }
+
+.xmr .pri-text-view { transform: rotate(0) }
+
+.xmr .date { transform: rotate(0); top: 26px; right: 51px; }
+
+.xmr .identicon { left: 665px; top: 4px }
+.xmr .qr-pub { top: 45px; left: 470px }
+  .xmr .qr-pub img { width: 99px }
+
+.xmr .share-counter { top: 9px; left: 484px } 
+
 
 /* Cloned Wallet */
-.cloned #xmrpri-view { display: none; }
 .currency.xmr.cloned
 .cloned .pri-text { font-size: 7px; }
 .secret-share-btn { border: none; padding: 5px 10px; background: #ed0e31; color: #fff; font-weight: bold; outline: none; cursor: pointer; }

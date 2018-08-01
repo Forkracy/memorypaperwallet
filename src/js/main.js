@@ -76,9 +76,10 @@
     $(`#${qrSelector}`, wallet).attr('id', newqrSelector);
     $('.upload', wallet).after(`<span class="share-counter">${label}/${maxShare}</span>`);
     originalWallet.after(wallet);
+
     
     $(`#${newPriKeySelector}`).text(share);
-    makeQRImage(newqrSelector, share);
+    makeQRImage(newqrSelector, share, 400, 400);
   }
 
   $('#btn').click(function(event) {
@@ -150,13 +151,13 @@
         } else {
           setResult(`#xmrpub`, result.public);
           // setResult(`#xmrpub-spend`, result.public_spend);
-          setResult(`#xmrpri-spend`, '<strong><sup>SPEND</sup></strong>' + result.private_spend);
+          setResult(`#xmrpri-spend`, result.private_spend);
           // setResult(`#xmrpub-view`, result.public_view);
           setResult(`#xmrpri-view`, '<strong><sup>VIEW</sup></strong>' + result.private_view);
 
           makeQRImage(`qr-xmrpub`, result.public);
           // makeQRImage(`qr-xmrpub-spend`, result.public_spend);
-          makeQRImage(`qr-xmrpri-spend`, result.private_spend);
+          makeQRImage(`qr-xmrpri-spend`, result.private_spend, 209, 209);
           // makeQRImage(`qr-xmrpub-view`, result.public_view);
           makeQRImage(`qr-xmrpri-view`, result.private_view);
           $('#result').toggle();
