@@ -213,16 +213,13 @@ body.tos-show {
    transform: rotate(0);
    font-size: 10px;
 }
-.xmr .pri-text {word-wrap: break-word; display: block; width: 218px; left: 11px; top: 262px; background: #fff; font-size: 9px; line-height: 9px; text-align: center; z-index: 9; transform: rotate(0) }
-  .xmr.cloned .pri-text { width: 460px }
+.xmr .pri-text {word-wrap: break-word; display: block; width: 230px; left: 4px; top: 229px; background: #fff; font-size: 9px; line-height: 9px; text-align: center; z-index: 9; transform: rotate(0) }
+  .xmr.cloned .pri-text { width: 230px }
+  .xmr.cloned .pri-text:before { content: 'Shamir Secret-Share: '; }
 #xmrpri-view  {word-wrap: break-word; left: 478px; background: #fff; width: 128px; display: block; top: 197px; font-size: 11px; line-height: 9px; text-align: center; }
 
-.xmr .qr-pri {
-  position: absolute;
-  right: 467px;
-  top: 23px;
-}
-.xmr .qr-pri img { width: 225px; }
+.xmr .qr-pri { position: absolute; right: 481px; top: 23px; }
+  .xmr .qr-pri img { width: 195px; }
 
 #qr-xmrpri-view { position: absolute; right: 0; top: 149px; }
   #qr-xmrpri-view img { width: 88px }
