@@ -44,6 +44,11 @@
             shareValue = _form.find('.shares').val() * 1,
             thresholdValue = _form.find('.threshold').val() * 1;
 
+      if(privateKey.length > 105) {
+      console.log(privateKey.length);
+        alert('Password is too long! Secret Sharing Not Compatible. Must be less than 50 characters.');
+        return;
+      }
       // Doesn't make sense to have threshold > shares
       if(thresholdValue > shareValue) return _this.after('<div id="threshold-error" style="color: red;">Threshold can\'t be bigger than shares.</div>');
 
@@ -157,7 +162,7 @@
 
           makeQRImage(`qr-xmrpub`, result.public);
           // makeQRImage(`qr-xmrpub-spend`, result.public_spend);
-          makeQRImage(`qr-xmrpri-spend`, result.private_spend, 209, 209);
+          makeQRImage(`qr-xmrpri-spend`, result.private_spend);
           // makeQRImage(`qr-xmrpub-view`, result.public_view);
           makeQRImage(`qr-xmrpri-view`, result.private_view);
           $('#result').toggle();
@@ -257,7 +262,7 @@
     return '';
   }
 
-  function makeQRImage(IDSelector, text, width = 111, height = 111) {
+  function makeQRImage(IDSelector, text, width = 209, height = 209) {
     new QRCode(IDSelector, {
       text: text,
       width: width,
